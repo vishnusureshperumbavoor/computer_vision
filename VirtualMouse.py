@@ -21,21 +21,28 @@ while True:
             landmarks = hand.landmark 
             for id, landmark in enumerate(landmarks):
                 x , y = int(landmark.x*frame_width) , int(landmark.y*frame_height) 
+                #print(id)
                 #print(x,y)
-                if id ==8:
+                if id == 8:
                     cv2.circle(img=frame,center=(x,y),radius=20,color=(0,255,255))
                     index_x = screen_width/frame_width*x 
                     index_y = screen_height/frame_height*y 
                     pyautogui.moveTo(index_x,index_y)
-                if id ==12:
+                if id == 12:
                     cv2.circle(img=frame,center=(x,y),radius=20,color=(0,255,255))
                     thumb_x = screen_width/frame_width*x 
                     thumb_y = screen_height/frame_height*y 
-                    print(abs(thumb_y-index_y))
+                    #print(abs(thumb_y-index_y))
                     if abs(thumb_y - index_y < 50):
                         print("click")
                         pyautogui.click()
+                        #pyautogui.press('right')
                         pyautogui.sleep(1)
 
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
+
     cv2.imshow("Hologram Economics",frame)
-    cv2.waitKey(1)
+    #cv2.waitKey(1)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
