@@ -49,20 +49,13 @@ while True:
 
         #if cy <= gestureThreshold:  # if hand is at the height of the face
             # gesture 1 - left
-            if fingers == [1,0,0,0,0]:
-                print('left')
-                pyautogui.press('left')
-                pyautogui.sleep(3)
-
-            # gesture 2 - right
-            if fingers == [0,0,1,0,0]:
-                print('right')
-                pyautogui.press('right')
-                pyautogui.sleep(3)
-
-        # gesture 3 - show pointer 
         if fingers == [0,1,1,0,0]:
-            cv2.circle(imgCurrent,indexFinger,12,(0,0,255),cv2.FILLED)
+            print('move right')
+            pyautogui.press('right')
+            #pyautogui.sleep(1)
+        # gesture 3 - show pointer 
+        #if fingers == [0,1,1,0,0]:
+            #cv2.circle(imgCurrent,indexFinger,12,(0,0,255),cv2.FILLED)
             
 
     # button pressed iterations
@@ -75,4 +68,4 @@ while True:
 
     cv2.imshow("Images",frame)
     cv2.imshow("Slides",imgCurrent)
-    cv2.waitKey(
+    cv2.waitKey(1)
