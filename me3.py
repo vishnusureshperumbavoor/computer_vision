@@ -31,7 +31,29 @@ img7 = face_recognition.face_encodings(img7)[0]
 img8 = face_recognition.load_image_file("images/antony.jpg")
 img8 = face_recognition.face_encodings(img8)[0]
 
+img9 = face_recognition.load_image_file("images/Asim.jpg")
+img9 = face_recognition.face_encodings(img9)[0]
+
+img10 = face_recognition.load_image_file("images/VSP.jpg")
+img10 = face_recognition.face_encodings(img10)[0]
+
+img11 = face_recognition.load_image_file("images/yaseen.jpg")
+img11 = face_recognition.face_encodings(img11)[0]
+
+img12 = face_recognition.load_image_file("images/aswathy.jpg")
+img12 = face_recognition.face_encodings(img12)[0]
+
+img13 = face_recognition.load_image_file("images/rukku.jpg")
+img13 = face_recognition.face_encodings(img13)[0]
+
+img14 = face_recognition.load_image_file("images/don.jpg")
+img14 = face_recognition.face_encodings(img14)[0]
+
+img15 = face_recognition.load_image_file("images/rhithuja.jpg")
+img15 = face_recognition.face_encodings(img15)[0]
+
 known_face_encodings = [
+    img10,
     img0,
     img1,
     img2,
@@ -41,8 +63,15 @@ known_face_encodings = [
     img6,
     img7,
     img8,
+    img9,
+    img11,
+    img12,
+    img13,
+    img14, 
+    img15
 ]
 known_face_names = [
+    "VSP",
     "Adith Ashokan",
     "Akhilendran P",
     "Althaf OJ",
@@ -51,7 +80,13 @@ known_face_names = [
     "Grigor Sabu",
     "Hari",
     "Mech Queen",
-    "Vadakkan"
+    "Vadakkan",
+    "Asim Kabeer",
+    "Ahammed Yaseen",
+    "Electricity Queen",
+    "Mech Queen No 2",
+    "Mech Don",
+    "Rhithuja Electricity",
 ]
 
 face_locations = []
